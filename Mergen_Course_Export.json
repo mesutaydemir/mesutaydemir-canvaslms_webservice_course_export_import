@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "688088b6-c482-4b15-ba67-896e3a743dad",
+		"name": "Mergen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mergen_list_active_courses_in_an_account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ACCESS_TOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "export_type",
+							"value": "common_cartridge",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mergen.anadolu.edu.tr/api/v1/accounts/:account_id/courses",
+					"protocol": "https",
+					"host": [
+						"mergen",
+						"anadolu",
+						"edu",
+						"tr"
+					],
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						":account_id",
+						"courses"
+					],
+					"variable": [
+						{
+							"key": "account_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mergen_export_content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ACCESS_TOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "export_type",
+							"value": "common_cartridge",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mergen.anadolu.edu.tr/api/v1/courses/:course_id/content_exports",
+					"protocol": "https",
+					"host": [
+						"mergen",
+						"anadolu",
+						"edu",
+						"tr"
+					],
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						":course_id",
+						"content_exports"
+					],
+					"variable": [
+						{
+							"key": "course_id",
+							"value": "24292"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mergen_show_content_export",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ACCESS_TOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mergen.anadolu.edu.tr/api/v1/courses/:course_id/content_exports/:id",
+					"protocol": "https",
+					"host": [
+						"mergen",
+						"anadolu",
+						"edu",
+						"tr"
+					],
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						":course_id",
+						"content_exports",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "course_id",
+							"value": "24292"
+						},
+						{
+							"key": "id",
+							"value": "39819"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "7cxazcKQPD6ttpwfdyL7yWpOnti8yJcLvQSYFwEOHWr83Mebw89Z4xKEEbCdpGAh",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

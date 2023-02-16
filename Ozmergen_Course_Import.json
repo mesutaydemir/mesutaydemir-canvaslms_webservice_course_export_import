@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "50cfda50-2698-421e-8d47-9dc807a4b55d",
+		"name": "Ozmergen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mergen_list_active_courses_in_an_account Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ACCESS_TOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "export_type",
+							"value": "common_cartridge",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ozmergen.anadolu.edu.tr/api/v1/accounts/:account_id/courses",
+					"protocol": "https",
+					"host": [
+						"ozmergen",
+						"anadolu",
+						"edu",
+						"tr"
+					],
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						":account_id",
+						"courses"
+					],
+					"variable": [
+						{
+							"key": "account_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mergen_create_a_content_migration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ACCESS_TOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "settings[file_url]",
+							"value": "https://mergen.anadolu.edu.tr/files/4783880/download?download_frd=1&verifier=BUTnS5tBJxl79btOstkTS1pbBMOwZ9JlL36eKud6",
+							"type": "default"
+						},
+						{
+							"key": "migration_type",
+							"value": "canvas_cartridge_importer",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ozmergen.anadolu.edu.tr/api/v1/courses/:course_id/content_migrations",
+					"protocol": "https",
+					"host": [
+						"ozmergen",
+						"anadolu",
+						"edu",
+						"tr"
+					],
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						":course_id",
+						"content_migrations"
+					],
+					"variable": [
+						{
+							"key": "course_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
