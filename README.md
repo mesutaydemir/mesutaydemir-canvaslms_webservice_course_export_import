@@ -1,21 +1,20 @@
 # CANVAS LMS COURSE EXPORT
 
 ## List active courses in an account
-`GET https://mergen.anadolu.edu.tr/api/v1/accounts/:account_id/courses` ile **account_id_** verip ders **id** değerini al.
-
+We are getting course **id** `GET https://CANVAS_URL/api/v1/accounts/:account_id/courses` by providing **account_id_**
 ## Content Export
-`POST https://mergen.anadolu.edu.tr/api/v1/courses/:course_id/content_exports` ile **course_id** verip içeriği dışarı aktar. **id** değerini al.
+Provide **course_id**`POST https://CANVAS_URL/api/v1/courses/:course_id/content_exports` and export content. Get **id**
 
 ## Show Content Export
-`GET https://mergen.anadolu.edu.tr/api/v1/courses/:course_id/content_exports` ile **course_id** ve **id** değerlerini verip **attachment** altında **url** yi al.
+Provide **course_id** and **id** `GET https://CANVAS_URL/api/v1/courses/:course_id/content_exports` and get **url** aunder **attachment**
 
 
 # CANVAS LMS COURSE IMPORT
 ## List active courses in an account
-GET `https://ozmergen.anadolu.edu.tr/api/v1/accounts/:account_id/courses` ile **account_id_** verip ders **id** değerini al.
+Provide **account_id_**  GET `https://CANVAS_URL/api/v1/accounts/:account_id/courses` and get course **id**.
 
 ## Create Content Migration
-POST `https://ozmergen.anadolu.edu.tr/api/v1/courses/:course_id/content_migrations` ile **course_id** ve **settings[file_url]** ve **migration_type** değerleri girilip ders aktarım işlemi gerçekleştirilir:
+Provide **course_id**, **settings[file_url]** and **migration_type** POST `https://CANVAS_URL/api/v1/courses/:course_id/content_migrations`  and start migration:
 
 ```ruby
 **course_id** = **id**
